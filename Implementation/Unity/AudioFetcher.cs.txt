@@ -1,0 +1,40 @@
+using UnityEngine;
+using UnityEngine.Networking;
+using System.Collections;
+
+public class AudioFetcher : MonoBehaviour
+{
+    public AudioSource audioSource;
+    public uLipSync.uLipSync lipSync; // Correct namespace and class
+
+    public void FetchAudioFromAPI(string endpoint)
+    {
+        StartCoroutine(DownloadAudio(endpoint));
+    }
+
+    private IEnumerator DownloadAudio(string endpoint)
+    {
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(endpoint, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
+                audioSource.clip = clip;
+                audioSource.Play();
+                if (lipSync != null)
+                {
+                    // Disable and re-enable lipSync to re-analyze the new clip
+                    lipSync.enabled = false;
+                    // Note: uLipSync might not have a direct audioSource property; rely on the Inspector link
+                    lipSync.enabled = true; // Trigger re-analysis
+                }
+            }
+            else
+            {
+                Debug.LogError("Failed to fetch audio: " + www.error);
+            }
+        }
+    }
+}
