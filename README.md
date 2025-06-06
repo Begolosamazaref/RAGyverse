@@ -31,7 +31,7 @@ RAGyverse/
 │       ├── SavWav.cs.txt (WAV file handling)
 │       └── 1toonteen.rar (3D avatar assets)
 ├── Paper/
-│   └── Paper.pdf (Project documentation)
+│   └── Paper.pdf 
 └── Poster/
     └── RAGyverse FinalPoster.pdf (Project poster)
 ```
@@ -127,13 +127,6 @@ The Unity component creates an immersive VR experience:
 - **Backend**: Python, LangChain, Groq, PyMuPDF, Vosk, gTTS
 - **Frontend**: React, Flask, MongoDB
 - **VR**: Unity, uLipSync
-
-## Future Work
-
-- Multi-document correlation and cross-referencing
-- Improved avatar animations and expressions
-- Support for more document formats
-- Enhanced voice recognition in noisy environments
 
 ## Feedback
 
