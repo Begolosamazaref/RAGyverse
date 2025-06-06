@@ -1,6 +1,6 @@
 # RAGyverse
 
-RAGyverse is an immersive Retrieval Augmented Generation (RAG) system that combines virtual reality with AI-powered document interaction. The project enables users to interact with documents through natural voice conversations in a VR environment.
+RAGyverse is an immersive Retrieval Augmented Generation system that combines virtual reality with AI-powered document interaction. The project enables users to interact with documents through natural voice conversations in a VR environment.
 
 ## Project Overview
 
