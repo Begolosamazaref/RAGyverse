@@ -31,7 +31,7 @@ RAGyverse/
 │       ├── SavWav.cs.txt (WAV file handling)
 │       └── 1toonteen.rar (3D avatar assets)
 └── Paper/
-    └── Paper.pdf (Project documentation)
+    └── Paper.pdf 
 ```
 
 ## Components
