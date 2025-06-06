@@ -131,4 +131,4 @@ The Unity component creates an immersive VR experience:
 - Multi-document correlation and cross-referencing
 - Improved avatar animations and expressions
 - Support for more document formats
-- Enhanced voice recognition in noisy environments 
+- Enhanced voice recognition in noisy environments
