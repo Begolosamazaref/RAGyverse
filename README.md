@@ -30,8 +30,10 @@ RAGyverse/
 │       ├── AudioFetcher.cs.txt (Audio streaming in Unity)
 │       ├── SavWav.cs.txt (WAV file handling)
 │       └── 1toonteen.rar (3D avatar assets)
-└── Paper/
-    └── Paper.pdf (Project documentation)
+├── Paper/
+│   └── Paper.pdf (Project documentation)
+└── Poster/
+    └── RAGyverse FinalPoster.pdf (Project poster)
 ```
 
 ## Components
@@ -75,7 +77,7 @@ The Unity component creates an immersive VR experience:
    - API communication with backend
 
 2. **Avatar Animation**:
-   - 3D character rendering
+   - 3D character rendering using [1 Toon Teen](https://assetstore.unity.com/packages/3d/characters/humanoids/1-toon-teen-135513) asset
    - Lip synchronization with audio responses
    - Immersive VR environment
 
@@ -111,7 +113,7 @@ The Unity component creates an immersive VR experience:
 1. Import the Unity project
 2. Add the provided C# scripts to appropriate GameObjects
 3. Configure the API endpoints in `VoiceRecorder.cs` to match your backend server
-4. Import the avatar assets from `1toonteen.rar`
+4. Import the avatar assets from `1toonteen.rar` or download from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/humanoids/1-toon-teen-135513)
 
 ## Usage
 
@@ -132,3 +134,7 @@ The Unity component creates an immersive VR experience:
 - Improved avatar animations and expressions
 - Support for more document formats
 - Enhanced voice recognition in noisy environments
+
+## Feedback
+
+We value your feedback! Please take a moment to complete our [short survey](https://docs.google.com/forms/d/e/1FAIpQLScq5t2gUsB71Xj_FJ42XB2YsQxGrSNbIVc5kXMmmICT73Z_IA/viewform) to help us improve RAGyverse.
