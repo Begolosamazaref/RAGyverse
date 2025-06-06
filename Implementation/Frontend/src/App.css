@@ -1,0 +1,408 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f9fafb;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #4f46e5;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* PDF Uploader */
+.pdf-uploader {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-uploader h2 {
+  font-size: 1.5rem;
+  color: #4f46e5;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upload-label:hover {
+  background-color: #e5e7eb;
+}
+
+.upload-label svg {
+  margin-bottom: 0.5rem;
+}
+
+.upload-label span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4f46e5;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 1rem 0;
+}
+
+.text-output {
+  margin-top: 1.5rem;
+}
+
+.text-output h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.text-output pre {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+/* Question Buttons */
+.question-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.question-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.voice-button {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.voice-button:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.voice-button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.text-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.text-button:hover {
+  background-color: #059669;
+}
+
+.stop-button {
+  background-color: #dc2626;
+  color: white;
+}
+
+.stop-button:hover {
+  background-color: #b91c1c;
+}
+
+/* Recording Prompt */
+.recording-prompt {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #10b981;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+/* Voice Error */
+.voice-error {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #dc2626;
+  margin: 1rem 0;
+}
+
+/* Text Input Form */
+.text-input-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.text-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.submit-button {
+  padding: 0.5rem 1rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #4338ca;
+}
+
+/* Question Output */
+.question-output {
+  margin-top: 1.5rem;
+}
+
+.question-output h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.question-output p {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+/* Footer */
+.footer {
+  background-color: #4f46e5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .pdf-uploader {
+    padding: 1rem;
+  }
+
+  .question-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-input-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submit-button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Recorded Audios */
+.recorded-audios {
+  margin-top: 1.5rem;
+}
+
+.recorded-audios h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.recorded-audios ul {
+  list-style: none;
+}
+
+.recorded-audios li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.recorded-audios a {
+  color: #4f46e5;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.recorded-audios a:hover {
+  text-decoration: underline;
+}
+
+.recorded-audios audio {
+  max-width: 100%;
+}
+/* Downloaded Audios */
+.downloaded-audios {
+  margin-top: 1.5rem;
+}
+
+.downloaded-audios h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.downloaded-audios ul {
+  list-style: none;
+}
+
+.downloaded-audios li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.downloaded-audios a {
+  color: #4f46e5;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.downloaded-audios a:hover {
+  text-decoration: underline;
+}
+
+.downloaded-audios audio {
+  max-width: 100%;
+}
+/* Audio Player */
+.audio-player {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.audio-player audio {
+  width: 100%;
+  max-width: 400px;
+}
+}

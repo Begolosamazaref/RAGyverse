@@ -1,0 +1,48 @@
+using UnityEngine;
+using System.IO;
+using System;
+
+public class SavWav : MonoBehaviour
+{
+    public static void Save(string filepath, AudioClip clip)
+    {
+        // Ensure the directory exists
+        Directory.CreateDirectory(Path.GetDirectoryName(filepath));
+
+        // Convert AudioClip to WAV format
+        var samples = new float[clip.samples * clip.channels];
+        clip.GetData(samples, 0);
+
+        // Write WAV file
+        using (var fileStream = new FileStream(filepath, FileMode.Create))
+        using (var writer = new BinaryWriter(fileStream))
+        {
+            int sampleRate = clip.frequency;
+            int channels = clip.channels;
+            int sampleCount = clip.samples;
+
+            // WAV header
+            writer.Write(new char[] { 'R', 'I', 'F', 'F' });
+            writer.Write(36 + samples.Length * 2); // File size
+            writer.Write(new char[] { 'W', 'A', 'V', 'E' });
+            writer.Write(new char[] { 'f', 'm', 't', ' ' });
+            writer.Write(16); // Subchunk size
+            writer.Write((short)1); // Audio format (PCM)
+            writer.Write((short)channels);
+            writer.Write(sampleRate);
+            writer.Write(sampleRate * channels * 2); // Byte rate
+            writer.Write((short)(channels * 2)); // Block align
+            writer.Write((short)16); // Bits per sample
+            writer.Write(new char[] { 'd', 'a', 't', 'a' });
+            writer.Write(samples.Length * 2); // Data size
+
+            // Write samples
+            for (int i = 0; i < samples.Length; i++)
+            {
+                short value = (short)(samples[i] * 32767);
+                writer.Write(value);
+            }
+        }
+        Debug.Log("WAV file saved to: " + filepath);
+    }
+}

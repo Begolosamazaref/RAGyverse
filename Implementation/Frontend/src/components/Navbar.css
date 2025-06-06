@@ -1,0 +1,63 @@
+.header {
+    background-color: #4f46e5;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .username {
+    font-size: 0.9rem;
+    color: #e5e7eb;
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .logout-button:hover {
+    text-decoration: underline;
+  }
