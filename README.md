@@ -29,9 +29,7 @@ RAGyverse/
 │       ├── VoiceRecorder.cs.txt (Voice recording in Unity)
 │       ├── AudioFetcher.cs.txt (Audio streaming in Unity)
 │       ├── SavWav.cs.txt (WAV file handling)
-│       └── 1toonteen.rar (3D avatar assets)
-├── Paper/
-│   └── Paper.pdf 
+│       └── 1toonteen.rar (3D avatar assets)  
 └── Poster/
     └── RAGyverse FinalPoster.pdf (Project poster)
 ```
