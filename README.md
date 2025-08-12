@@ -129,7 +129,3 @@ The Unity component creates an immersive VR experience:
 ## Feedback
 
 We value your feedback! Please take a moment to complete our [short survey](https://docs.google.com/forms/d/e/1FAIpQLScq5t2gUsB71Xj_FJ42XB2YsQxGrSNbIVc5kXMmmICT73Z_IA/viewform) to help us improve RAGyverse.
-
-
-Backend:  https://github.com/AdhamAfis/RAGYverseFrontDemo
-Frontend: https://github.com/MohamedAKonsowa/RagyVerseFastBackend
